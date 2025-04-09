@@ -13,18 +13,18 @@ import { Tickets } from "@/components/sections/tickets";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-[family-name:var(--font-geist-sans)]">
-      {/* Purple fluid background effect */}
+      {/* Purple and lime fluid background effect */}
       <SplashCursor
         CURL={5}
         SPLAT_RADIUS={0.3}
         SPLAT_FORCE={8000}
         COLOR_UPDATE_SPEED={15}
-        BACK_COLOR={{ r: 0.3, g: 0, b: 0.5 }} // Purple background color
+        BACK_COLOR={{ r: 0.25, g: 0.05, b: 0.4 }} // Dark purple background color
       />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Main Content */}
       <main className="relative z-10">
         <Hero />
@@ -36,7 +36,7 @@ export default function Home() {
         <FAQ />
         <Tickets />
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>

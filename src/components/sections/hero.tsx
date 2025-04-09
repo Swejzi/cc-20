@@ -13,7 +13,7 @@ export function Hero() {
 
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeIn">
-          <span className="text-purple-500">Chain</span>Camp 2026
+          <span className="text-purple-500">Chain</span><span className="text-lime-400">Camp</span> 2026
         </h1>
         <p className="text-2xl md:text-3xl text-gray-300 mb-8 animate-fadeIn animation-delay-200">
           7. ročník legendární akce bitcoinové komunity
@@ -21,44 +21,44 @@ export function Hero() {
         <p className="text-xl text-gray-400 mb-12 animate-fadeIn animation-delay-400">
           Aula VŠB, Ostrava - Poruba, 20. - 21. září 2026
         </p>
-        
+
         <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mb-12 animate-fadeIn animation-delay-600">
-          <Link 
-            href="#tickets" 
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors text-lg font-semibold"
+          <Link
+            href="#tickets"
+            className="bg-purple-600 hover:bg-purple-700 text-lime-300 px-8 py-4 rounded-full transition-colors text-lg font-semibold border border-lime-500/50"
           >
             Koupit vstupenku
           </Link>
-          <Link 
-            href="#schedule" 
-            className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full transition-colors text-lg font-semibold"
+          <Link
+            href="#schedule"
+            className="bg-lime-600/20 hover:bg-lime-600/30 text-lime-300 px-8 py-4 rounded-full transition-colors text-lg font-semibold border border-lime-500/30"
           >
             Program konference
           </Link>
         </div>
-        
+
         <div className="mt-16 animate-fadeIn animation-delay-800">
-          <p className="text-gray-400 mb-4">Hlavní partneři</p>
+          <p className="text-lime-300 mb-4 font-medium">Hlavní partneři</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+            <div className="w-32 h-16 bg-purple-900/30 border border-lime-500/20 rounded-lg flex items-center justify-center hover:border-lime-500/50 transition-colors">
               <span className="text-white font-bold">Trezor</span>
             </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+            <div className="w-32 h-16 bg-purple-900/30 border border-lime-500/20 rounded-lg flex items-center justify-center hover:border-lime-500/50 transition-colors">
               <span className="text-white font-bold">Alza</span>
             </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+            <div className="w-32 h-16 bg-purple-900/30 border border-lime-500/20 rounded-lg flex items-center justify-center hover:border-lime-500/50 transition-colors">
               <span className="text-white font-bold">Paralelní Polis</span>
             </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
+            <div className="w-32 h-16 bg-purple-900/30 border border-lime-500/20 rounded-lg flex items-center justify-center hover:border-lime-500/50 transition-colors">
               <span className="text-white font-bold">Braiins</span>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Scroll down indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Link href="#about" className="text-white/50 hover:text-white transition-colors">
+        <Link href="#about" className="text-lime-400/70 hover:text-lime-400 transition-colors">
           <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>

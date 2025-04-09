@@ -1027,12 +1027,22 @@ function SplashCursor({
 
     // --- Color Generation ---
     function generateColor(): RGBColor {
-      // Generate colors in the purple spectrum (hue range 0.7-0.85)
-      let hue = 0.7 + Math.random() * 0.15; // Purple hue range
-      let c = HSVtoRGB(hue, 0.8, 1.0);
-      // Adjust brightness but keep the purple more vibrant
-      c.r *= 0.5; c.g *= 0.3; c.b *= 0.8;
-      return c;
+      // Randomly choose between purple and lime colors
+      if (Math.random() < 0.5) {
+        // Generate colors in the purple spectrum (hue range 0.7-0.85)
+        let hue = 0.7 + Math.random() * 0.15; // Purple hue range
+        let c = HSVtoRGB(hue, 0.8, 1.0);
+        // Adjust brightness but keep the purple more vibrant
+        c.r *= 0.5; c.g *= 0.3; c.b *= 0.8;
+        return c;
+      } else {
+        // Generate colors in the lime spectrum (hue range 0.2-0.35)
+        let hue = 0.2 + Math.random() * 0.15; // Lime hue range
+        let c = HSVtoRGB(hue, 0.9, 1.0);
+        // Adjust brightness to make lime more vibrant
+        c.r *= 0.6; c.g *= 0.9; c.b *= 0.2;
+        return c;
+      }
     }
 
     function HSVtoRGB(h: number, s: number, v: number): RGBColor {

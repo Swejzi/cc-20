@@ -76,6 +76,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Custom colors */
+  --purple-primary: #8A2BE2;
+  --purple-light: #9D4EDD;
+  --purple-dark: #6A0DAD;
+  --lime: #BFFF00;
+  --lime-light: #D9FF66;
+  --lime-dark: #99CC00;
 }
 
 .dark {

@@ -15,34 +15,34 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold text-white">
-                <span className="text-purple-500">Chain</span>Camp
+                <span className="text-purple-500">Chain</span><span className="text-lime-400">Camp</span>
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#about" className="text-gray-300 hover:text-lime-300 transition-colors">
               O konferenci
             </Link>
-            <Link href="#speakers" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#speakers" className="text-gray-300 hover:text-lime-300 transition-colors">
               Speakeři
             </Link>
-            <Link href="#schedule" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#schedule" className="text-gray-300 hover:text-lime-300 transition-colors">
               Program
             </Link>
-            <Link href="#sponsors" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#sponsors" className="text-gray-300 hover:text-lime-300 transition-colors">
               Sponzoři
             </Link>
-            <Link href="#venue" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#venue" className="text-gray-300 hover:text-lime-300 transition-colors">
               Místo
             </Link>
-            <Link href="#faq" className="text-gray-300 hover:text-purple-400 transition-colors">
+            <Link href="#faq" className="text-gray-300 hover:text-lime-300 transition-colors">
               FAQ
             </Link>
-            <Link 
-              href="#tickets" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition-colors"
+            <Link
+              href="#tickets"
+              className="bg-purple-600 hover:bg-purple-700 text-lime-300 px-4 py-2 rounded-full transition-colors border border-lime-500/50"
             >
               Vstupenky
             </Link>
@@ -51,8 +51,9 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-lime-300 hover:text-white focus:outline-none"
             >
               {isMenuOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,51 +73,51 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-lg border-b border-purple-500/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link 
-              href="#about" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#about"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               O konferenci
             </Link>
-            <Link 
-              href="#speakers" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#speakers"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Speakeři
             </Link>
-            <Link 
-              href="#schedule" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#schedule"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Program
             </Link>
-            <Link 
-              href="#sponsors" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#sponsors"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Sponzoři
             </Link>
-            <Link 
-              href="#venue" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#venue"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Místo
             </Link>
-            <Link 
-              href="#faq" 
-              className="block px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            <Link
+              href="#faq"
+              className="block px-3 py-2 text-gray-300 hover:text-lime-300 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
             </Link>
-            <Link 
-              href="#tickets" 
-              className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition-colors text-center mt-4"
+            <Link
+              href="#tickets"
+              className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 text-lime-300 rounded-full transition-colors text-center mt-4 border border-lime-500/50"
               onClick={() => setIsMenuOpen(false)}
             >
               Vstupenky
