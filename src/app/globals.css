@@ -77,13 +77,13 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Custom colors */
-  --purple-primary: #8A2BE2;
-  --purple-light: #9D4EDD;
-  --purple-dark: #6A0DAD;
-  --lime: #BFFF00;
-  --lime-light: #D9FF66;
-  --lime-dark: #99CC00;
+  /* Custom colors - Official ChainCamp colors */
+  --purple-primary: #530b6e;
+  --purple-light: #6a1c89;
+  --purple-dark: #3d0852;
+  --lime: #30ff97;
+  --lime-light: #5fffad;
+  --lime-dark: #00cc6a;
 }
 
 .dark {

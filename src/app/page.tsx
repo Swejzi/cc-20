@@ -19,7 +19,7 @@ export default function Home() {
         SPLAT_RADIUS={0.3}
         SPLAT_FORCE={8000}
         COLOR_UPDATE_SPEED={15}
-        BACK_COLOR={{ r: 0.25, g: 0.05, b: 0.4 }} // Dark purple background color
+        BACK_COLOR={{ r: 0.1, g: 0.1, b: 0.1 }} // Black background color
       />
 
       {/* Navigation */}
