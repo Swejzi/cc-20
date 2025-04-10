@@ -45,7 +45,7 @@ export function Sponsors() {
             {sponsors.platinum.map((sponsor, index) => (
               <div
                 key={index}
-                className="bg-black backdrop-blur-sm next-block-border-purple p-8 flex items-center justify-center h-48"
+                className="next-block-card-purple p-8 flex items-center justify-center h-48"
               >
                 <div className="text-white text-2xl font-bold">{sponsor.name}</div>
               </div>
@@ -60,7 +60,7 @@ export function Sponsors() {
             {sponsors.gold.map((sponsor, index) => (
               <div
                 key={index}
-                className="bg-black backdrop-blur-sm next-block-border-lime p-6 flex items-center justify-center h-36"
+                className="next-block-card-lime p-6 flex items-center justify-center h-36"
               >
                 <div className="text-white text-xl font-bold">{sponsor.name}</div>
               </div>
@@ -75,7 +75,7 @@ export function Sponsors() {
             {sponsors.silver.map((sponsor, index) => (
               <div
                 key={index}
-                className="bg-black backdrop-blur-sm next-block-border-purple p-4 flex items-center justify-center h-28"
+                className="next-block-card-purple p-4 flex items-center justify-center h-28"
               >
                 <div className="text-white font-bold">{sponsor.name}</div>
               </div>
@@ -90,7 +90,7 @@ export function Sponsors() {
             {sponsors.bronze.map((sponsor, index) => (
               <div
                 key={index}
-                className="bg-black backdrop-blur-sm next-block-border-lime p-3 flex items-center justify-center h-24"
+                className="next-block-card-lime p-3 flex items-center justify-center h-24"
               >
                 <div className="text-white text-sm font-bold">{sponsor.name}</div>
               </div>

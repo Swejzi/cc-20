@@ -198,9 +198,31 @@
 }
 
 .next-block-card {
-  background-color: black;
+  background-color: rgba(83, 11, 110, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-width: var(--border-width-default);
   border-radius: var(--border-radius-none);
+  padding: 1.5rem;
+}
+
+.next-block-card-purple {
+  background-color: rgba(83, 11, 110, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  border-color: var(--purple-primary);
+  padding: 1.5rem;
+}
+
+.next-block-card-lime {
+  background-color: rgba(48, 255, 151, 0.05);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  border-color: var(--lime);
   padding: 1.5rem;
 }
 

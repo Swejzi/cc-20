@@ -90,10 +90,10 @@ export function Tickets() {
           {TICKET_TYPES.map((ticket) => (
             <div
               key={ticket.id}
-              className={`bg-black backdrop-blur-sm next-block-border transition-all ${
+              className={`next-block-card-purple transition-all ${
                 selectedTicket === ticket.id
-                  ? 'border-[#530b6e]'
-                  : 'border-[#530b6e]/30 hover:border-[#530b6e]/70'
+                  ? 'border-[#30ff97]'
+                  : 'border-[#530b6e] hover:border-[#30ff97]/70'
               } ${ticket.popular ? 'relative' : ''}`}
             >
               {ticket.popular && (

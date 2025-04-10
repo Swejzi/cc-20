@@ -353,7 +353,7 @@ export function Schedule() {
           {filteredSchedule.map((item) => (
             <div
               key={item.id}
-              className="bg-black backdrop-blur-sm next-block-border-purple p-6 transition-all hover:border-[#30ff97]"
+              className="next-block-card-purple transition-all hover:border-[#30ff97]"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 <div className="md:w-1/6">

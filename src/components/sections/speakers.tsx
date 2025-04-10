@@ -117,7 +117,7 @@ export function Speakers() {
           {SPEAKERS.map((speaker) => (
             <div
               key={speaker.id}
-              className="bg-black backdrop-blur-sm next-block-border-purple overflow-hidden cursor-pointer transform transition-all hover:scale-105"
+              className="next-block-card-purple overflow-hidden cursor-pointer transform transition-all hover:scale-105"
               onClick={() => setSelectedSpeaker(speaker)}
             >
               <div className="h-64 bg-purple-800/50 relative">
@@ -153,7 +153,7 @@ export function Speakers() {
       {selectedSpeaker && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={() => setSelectedSpeaker(null)}>
           <div
-            className="bg-black backdrop-blur-lg next-block-border-purple p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            className="next-block-card-purple max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-start mb-6">

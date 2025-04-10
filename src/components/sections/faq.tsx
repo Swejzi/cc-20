@@ -83,9 +83,10 @@ export function FAQ() {
             {FAQ_ITEMS.map((item, index) => (
               <div
                 key={index}
-                className="bg-black backdrop-blur-sm next-block-border-purple overflow-hidden transition-all"
+                className="next-block-card-purple overflow-hidden transition-all"
               >
                 <button
+                  type="button"
                   className="w-full text-left p-6 focus:outline-none flex justify-between items-center"
                   onClick={() => toggleFAQ(index)}
                 >
