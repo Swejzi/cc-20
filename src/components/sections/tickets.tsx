@@ -77,42 +77,42 @@ export function Tickets() {
     <section id="tickets" className="py-20 bg-black/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="text-purple-500">Vstupenky</span>
+          <h2 className="text-3xl md:text-4xl mb-4 next-block-heading">
+            <span className="text-[#530b6e]">VSTUPENKY</span>
           </h2>
-          <div className="w-20 h-1 bg-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[#530b6e] to-[#30ff97] mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
             Zajistěte si vstupenku na ChainCamp 2026 a buďte součástí největší bitcoinové konference v Česku a na Slovensku.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {TICKET_TYPES.map((ticket) => (
-            <div 
+            <div
               key={ticket.id}
-              className={`bg-purple-900/20 backdrop-blur-sm rounded-xl border transition-all ${
-                selectedTicket === ticket.id 
-                  ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
-                  : 'border-purple-500/20 hover:border-purple-500/50'
+              className={`bg-black backdrop-blur-sm next-block-border transition-all ${
+                selectedTicket === ticket.id
+                  ? 'border-[#530b6e]'
+                  : 'border-[#530b6e]/30 hover:border-[#530b6e]/70'
               } ${ticket.popular ? 'relative' : ''}`}
             >
               {ticket.popular && (
-                <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                <div className="absolute top-0 right-0 bg-[#530b6e] text-[#30ff97] text-xs font-bold px-3 py-1">
                   Nejpopulárnější
                 </div>
               )}
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2">{ticket.name}</h3>
                 <p className="text-gray-400 mb-4">{ticket.description}</p>
-                
+
                 <div className="mb-6">
                   <span className="text-3xl font-bold text-white">{paymentMethod === "bitcoin" ? ticket.bitcoinPrice : ticket.price} Kč</span>
                   {paymentMethod === "bitcoin" && (
                     <span className="text-sm text-purple-400 ml-2">10% sleva při platbě bitcoinem</span>
                   )}
                 </div>
-                
+
                 <ul className="space-y-2 mb-6">
                   {ticket.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
@@ -123,12 +123,13 @@ export function Tickets() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button
-                  className={`w-full py-3 rounded-lg transition-colors ${
+                  type="button"
+                  className={`w-full py-3 next-block-border transition-colors ${
                     selectedTicket === ticket.id
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-purple-900/50 text-gray-300 hover:bg-purple-900/80 hover:text-white'
+                      ? 'bg-[#530b6e] text-[#30ff97] border-[#30ff97]'
+                      : 'bg-black text-gray-300 hover:text-[#30ff97] border-[#530b6e]/50 hover:border-[#530b6e]'
                   }`}
                   onClick={() => setSelectedTicket(ticket.id)}
                 >
@@ -138,10 +139,10 @@ export function Tickets() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 max-w-2xl mx-auto bg-purple-900/20 backdrop-blur-sm rounded-xl border border-purple-500/20 p-8">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Dokončit objednávku</h3>
-          
+
           <div className="mb-6">
             <label className="block text-white font-medium mb-2">Vybraná vstupenka</label>
             <div className="bg-purple-900/50 rounded-lg p-4 flex justify-between items-center">
@@ -153,23 +154,26 @@ export function Tickets() {
                   ({getTicketPrice()} Kč)
                 </span>
               </div>
-              <button 
-                className="text-purple-400 hover:text-purple-300 transition-colors"
+              <button
+                type="button"
+                className="text-[#530b6e] hover:text-[#30ff97] transition-colors"
                 onClick={() => window.location.href = '#tickets'}
+                aria-label="Zavřít detail vstupenky"
               >
                 Změnit
               </button>
             </div>
           </div>
-          
+
           <div className="mb-6">
             <label className="block text-white font-medium mb-2">Způsob platby</label>
             <div className="grid grid-cols-3 gap-4">
               <button
-                className={`p-4 rounded-lg flex flex-col items-center transition-colors ${
-                  paymentMethod === "bitcoin" 
-                    ? 'bg-purple-600 text-white' 
-                    : 'bg-purple-900/50 text-gray-300 hover:bg-purple-900/80 hover:text-white'
+                type="button"
+                className={`p-4 next-block-border flex flex-col items-center transition-colors ${
+                  paymentMethod === "bitcoin"
+                    ? 'bg-[#530b6e] text-[#30ff97] border-[#30ff97]'
+                    : 'bg-black text-gray-300 hover:text-[#30ff97] border-[#530b6e]/50 hover:border-[#530b6e]'
                 }`}
                 onClick={() => setPaymentMethod("bitcoin")}
               >
@@ -179,12 +183,13 @@ export function Tickets() {
                 <span>Bitcoin</span>
                 <span className="text-xs mt-1">10% sleva</span>
               </button>
-              
+
               <button
-                className={`p-4 rounded-lg flex flex-col items-center transition-colors ${
-                  paymentMethod === "card" 
-                    ? 'bg-purple-600 text-white' 
-                    : 'bg-purple-900/50 text-gray-300 hover:bg-purple-900/80 hover:text-white'
+                type="button"
+                className={`p-4 next-block-border flex flex-col items-center transition-colors ${
+                  paymentMethod === "card"
+                    ? 'bg-[#530b6e] text-[#30ff97] border-[#30ff97]'
+                    : 'bg-black text-gray-300 hover:text-[#30ff97] border-[#530b6e]/50 hover:border-[#530b6e]'
                 }`}
                 onClick={() => setPaymentMethod("card")}
               >
@@ -194,12 +199,13 @@ export function Tickets() {
                 <span>Karta</span>
                 <span className="text-xs mt-1 opacity-0">-</span>
               </button>
-              
+
               <button
-                className={`p-4 rounded-lg flex flex-col items-center transition-colors ${
-                  paymentMethod === "bank" 
-                    ? 'bg-purple-600 text-white' 
-                    : 'bg-purple-900/50 text-gray-300 hover:bg-purple-900/80 hover:text-white'
+                type="button"
+                className={`p-4 next-block-border flex flex-col items-center transition-colors ${
+                  paymentMethod === "bank"
+                    ? 'bg-[#530b6e] text-[#30ff97] border-[#30ff97]'
+                    : 'bg-black text-gray-300 hover:text-[#30ff97] border-[#530b6e]/50 hover:border-[#530b6e]'
                 }`}
                 onClick={() => setPaymentMethod("bank")}
               >
@@ -211,7 +217,7 @@ export function Tickets() {
               </button>
             </div>
           </div>
-          
+
           <div className="mb-8">
             <label className="block text-white font-medium mb-2">Osobní údaje</label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -237,16 +243,16 @@ export function Tickets() {
               />
             </div>
           </div>
-          
+
           <div className="flex justify-between items-center mb-6">
             <span className="text-white font-medium">Celková cena:</span>
             <span className="text-2xl font-bold text-white">{getTicketPrice()} Kč</span>
           </div>
-          
-          <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg transition-colors text-lg font-semibold">
+
+          <button type="button" className="w-full next-block-btn next-block-btn-primary py-4 text-lg">
             Dokončit objednávku
           </button>
-          
+
           <p className="text-gray-400 text-sm text-center mt-4">
             Kliknutím na tlačítko souhlasíte s <a href="#" className="text-purple-400 hover:text-purple-300">obchodními podmínkami</a> a <a href="#" className="text-purple-400 hover:text-purple-300">zpracováním osobních údajů</a>.
           </p>

@@ -104,20 +104,20 @@ export function Speakers() {
     <section id="speakers" className="py-20 bg-gradient-to-b from-black/0 to-purple-900/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="text-purple-500">Speakeři</span> konference
+          <h2 className="text-3xl md:text-4xl mb-4 next-block-heading">
+            <span className="text-[#530b6e]">SPEAKEŘI</span> <span className="text-white">KONFERENCE</span>
           </h2>
-          <div className="w-20 h-1 bg-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[#530b6e] to-[#30ff97] mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
             Na ChainCampu vystoupí přední odborníci z bitcoinové komunity. Přijďte si poslechnout jejich přednášky a získat cenné informace a zkušenosti.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {SPEAKERS.map((speaker) => (
-            <div 
+            <div
               key={speaker.id}
-              className="bg-purple-900/20 backdrop-blur-sm rounded-xl border border-purple-500/20 overflow-hidden cursor-pointer transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+              className="bg-black backdrop-blur-sm next-block-border-purple overflow-hidden cursor-pointer transform transition-all hover:scale-105"
               onClick={() => setSelectedSpeaker(speaker)}
             >
               <div className="h-64 bg-purple-800/50 relative">
@@ -136,24 +136,24 @@ export function Speakers() {
             </div>
           ))}
         </div>
-        
+
         {/* "More speakers coming soon" card */}
         <div className="mt-12 bg-purple-900/20 backdrop-blur-sm rounded-xl border border-purple-500/20 p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Další speakeři budou oznámeni brzy</h3>
           <p className="text-gray-300 mb-6">
             Sledujte naše sociální sítě a přihlaste se k odběru newsletteru, abyste byli informováni o nových přednášejících.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full transition-colors">
+          <button type="button" className="next-block-btn next-block-btn-primary px-6 py-3">
             Přihlásit se k odběru novinek
           </button>
         </div>
       </div>
-      
+
       {/* Speaker Detail Modal */}
       {selectedSpeaker && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={() => setSelectedSpeaker(null)}>
-          <div 
-            className="bg-purple-900/90 backdrop-blur-lg rounded-xl border border-purple-500/30 p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+          <div
+            className="bg-black backdrop-blur-lg next-block-border-purple p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-start mb-6">
@@ -161,16 +161,18 @@ export function Speakers() {
                 <h3 className="text-2xl font-bold text-white">{selectedSpeaker.name}</h3>
                 <p className="text-purple-300">{selectedSpeaker.role} at {selectedSpeaker.company}</p>
               </div>
-              <button 
+              <button
+                type="button"
                 onClick={() => setSelectedSpeaker(null)}
                 className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Zavřít detail speakera"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            
+
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
                 <div className="bg-purple-800/50 rounded-lg h-48 flex items-center justify-center">
@@ -178,12 +180,12 @@ export function Speakers() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                
+
                 <div className="flex justify-center space-x-4 mt-4">
                   {selectedSpeaker.twitter && (
-                    <a 
-                      href={selectedSpeaker.twitter} 
-                      target="_blank" 
+                    <a
+                      href={selectedSpeaker.twitter}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-purple-400 transition-colors"
                     >
@@ -192,11 +194,11 @@ export function Speakers() {
                       </svg>
                     </a>
                   )}
-                  
+
                   {selectedSpeaker.linkedin && (
-                    <a 
-                      href={selectedSpeaker.linkedin} 
-                      target="_blank" 
+                    <a
+                      href={selectedSpeaker.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-purple-400 transition-colors"
                     >
@@ -205,11 +207,11 @@ export function Speakers() {
                       </svg>
                     </a>
                   )}
-                  
+
                   {selectedSpeaker.website && (
-                    <a 
-                      href={selectedSpeaker.website} 
-                      target="_blank" 
+                    <a
+                      href={selectedSpeaker.website}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-purple-400 transition-colors"
                     >
@@ -220,11 +222,11 @@ export function Speakers() {
                   )}
                 </div>
               </div>
-              
+
               <div className="md:w-2/3">
                 <h4 className="text-lg font-semibold text-purple-300 mb-3">Bio</h4>
                 <p className="text-gray-300 mb-6">{selectedSpeaker.bio}</p>
-                
+
                 <h4 className="text-lg font-semibold text-purple-300 mb-3">Témata přednášek</h4>
                 <ul className="text-gray-300 space-y-2">
                   <li className="flex items-start">

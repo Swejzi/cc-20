@@ -140,7 +140,7 @@ const SCHEDULE_ITEMS: ScheduleItem[] = [
     track: "Všechny",
     day: 1
   },
-  
+
   // Day 2
   {
     id: 15,
@@ -273,7 +273,7 @@ const SCHEDULE_ITEMS: ScheduleItem[] = [
 export function Schedule() {
   const [activeDay, setActiveDay] = useState<1 | 2>(1);
   const [activeTrack, setActiveTrack] = useState<string>("all");
-  
+
   const filteredSchedule = SCHEDULE_ITEMS.filter(item => {
     if (item.day !== activeDay) return false;
     if (activeTrack === "all") return true;
@@ -284,20 +284,21 @@ export function Schedule() {
     <section id="schedule" className="py-20 bg-black/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="text-purple-500">Program</span> konference
+          <h2 className="text-3xl md:text-4xl mb-4 next-block-heading">
+            <span className="text-[#530b6e]">PROGRAM</span> <span className="text-white">KONFERENCE</span>
           </h2>
-          <div className="w-20 h-1 bg-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[#530b6e] to-[#30ff97] mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
             Připravili jsme pro vás bohatý program plný přednášek, workshopů a panelových diskuzí. Vyberte si z nabídky a sestavte si vlastní program.
           </p>
         </div>
-        
+
         {/* Day selector */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-full bg-purple-900/30 p-1">
+          <div className="inline-flex bg-black next-block-border-purple p-1">
             <button
-              className={`px-6 py-2 rounded-full transition-colors ${
+              type="button"
+              className={`px-6 py-2 rounded-none transition-colors ${
                 activeDay === 1 ? "bg-purple-600 text-white" : "text-gray-300 hover:text-white"
               }`}
               onClick={() => setActiveDay(1)}
@@ -305,7 +306,8 @@ export function Schedule() {
               Den 1 - 20. září
             </button>
             <button
-              className={`px-6 py-2 rounded-full transition-colors ${
+              type="button"
+              className={`px-6 py-2 rounded-none transition-colors ${
                 activeDay === 2 ? "bg-purple-600 text-white" : "text-gray-300 hover:text-white"
               }`}
               onClick={() => setActiveDay(2)}
@@ -314,52 +316,55 @@ export function Schedule() {
             </button>
           </div>
         </div>
-        
+
         {/* Track selector */}
         <div className="flex justify-center mb-12 flex-wrap gap-2">
           <button
-            className={`px-4 py-2 rounded-full transition-colors ${
-              activeTrack === "all" ? "bg-purple-600 text-white" : "bg-purple-900/30 text-gray-300 hover:bg-purple-900/50"
+            type="button"
+            className={`px-4 py-2 rounded-none next-block-border transition-colors ${
+              activeTrack === "all" ? "bg-[#530b6e] text-[#30ff97]" : "bg-black text-gray-300 hover:text-[#30ff97]"
             }`}
             onClick={() => setActiveTrack("all")}
           >
             Všechny
           </button>
           <button
-            className={`px-4 py-2 rounded-full transition-colors ${
-              activeTrack === "Hlavní sál" ? "bg-purple-600 text-white" : "bg-purple-900/30 text-gray-300 hover:bg-purple-900/50"
+            type="button"
+            className={`px-4 py-2 rounded-none next-block-border transition-colors ${
+              activeTrack === "Hlavní sál" ? "bg-[#530b6e] text-[#30ff97]" : "bg-black text-gray-300 hover:text-[#30ff97]"
             }`}
             onClick={() => setActiveTrack("Hlavní sál")}
           >
             Hlavní sál
           </button>
           <button
-            className={`px-4 py-2 rounded-full transition-colors ${
-              activeTrack === "Workshop sál" ? "bg-purple-600 text-white" : "bg-purple-900/30 text-gray-300 hover:bg-purple-900/50"
+            type="button"
+            className={`px-4 py-2 rounded-none next-block-border transition-colors ${
+              activeTrack === "Workshop sál" ? "bg-[#530b6e] text-[#30ff97]" : "bg-black text-gray-300 hover:text-[#30ff97]"
             }`}
             onClick={() => setActiveTrack("Workshop sál")}
           >
             Workshop sál
           </button>
         </div>
-        
+
         {/* Schedule */}
         <div className="space-y-6">
           {filteredSchedule.map((item) => (
-            <div 
+            <div
               key={item.id}
-              className="bg-purple-900/20 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 transition-all hover:border-purple-500/40"
+              className="bg-black backdrop-blur-sm next-block-border-purple p-6 transition-all hover:border-[#30ff97]"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 <div className="md:w-1/6">
-                  <div className="text-purple-400 font-mono">{item.time}</div>
+                  <div className="text-[#530b6e] font-mono">{item.time}</div>
                   <div className="text-gray-400 text-sm">{item.track}</div>
                 </div>
-                
+
                 <div className="md:w-5/6">
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                   {item.speaker && (
-                    <p className="text-purple-300 mb-2">{item.speaker}</p>
+                    <p className="text-[#30ff97] mb-2">{item.speaker}</p>
                   )}
                   <p className="text-gray-300">{item.description}</p>
                 </div>
@@ -367,10 +372,10 @@ export function Schedule() {
             </div>
           ))}
         </div>
-        
+
         {/* Download button */}
         <div className="mt-12 text-center">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full transition-colors inline-flex items-center">
+          <button type="button" className="next-block-btn next-block-btn-primary px-6 py-3 inline-flex items-center">
             <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>

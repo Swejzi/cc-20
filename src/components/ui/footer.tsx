@@ -13,7 +13,7 @@ export function Footer() {
     console.log("Email submitted:", email);
     setIsSubmitted(true);
     setEmail("");
-    
+
     // Reset the submitted state after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -26,8 +26,8 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="col-span-full lg:col-span-1">
             <div className="mb-6">
-              <span className="text-2xl font-bold text-white">
-                <span className="text-purple-500">Chain</span>Camp
+              <span className="text-2xl font-bold text-white next-block-heading">
+                <span className="text-[#530b6e]">CHAIN</span><span className="text-[#30ff97]">CAMP</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -38,17 +38,17 @@ export function Footer() {
               Aula VŠB, Ostrava - Poruba
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-white font-bold mb-4">Kontaktujte nás</h3>
             <a
               href="mailto:info@chaincamp.cz"
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-[#530b6e] hover:text-[#30ff97] transition-colors"
             >
               info@chaincamp.cz
             </a>
           </div>
-          
+
           <div>
             <h3 className="text-white font-bold mb-4">Chceš vědět o všem jako první?</h3>
             <form onSubmit={handleSubmit} className="flex">
@@ -57,18 +57,18 @@ export function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Tvůj e-mail"
-                className="bg-purple-900/30 border border-purple-500/30 rounded-l-full px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 w-full"
+                className="bg-black border border-[#530b6e] rounded-none px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#530b6e]/50 w-full"
                 required
               />
               <button
                 type="submit"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-r-full transition-colors"
+                className="bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] px-4 py-2 rounded-none border border-[#30ff97] transition-colors"
               >
                 {isSubmitted ? "✓" : "→"}
               </button>
             </form>
           </div>
-          
+
           <div>
             <h3 className="text-white font-bold mb-4">Na sockách Ti nic neuteče, sleduj!</h3>
             <div className="flex space-x-4">
@@ -80,14 +80,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
-        <div className="mt-12 pt-8 border-t border-purple-900/30 text-center text-gray-500 text-sm">
+
+        <div className="mt-12 pt-8 border-t border-[#530b6e]/30 text-center text-gray-500 text-sm">
           <p>ChainCamp © 2026 | ChainCamp s.r.o. | IČ: 224 87 859</p>
           <div className="mt-2 flex justify-center space-x-4">
-            <Link href="/obchodni-podminky" className="hover:text-purple-400 transition-colors">
+            <Link href="/obchodni-podminky" className="hover:text-[#30ff97] transition-colors">
               Obchodní podmínky
             </Link>
-            <Link href="/ochrana-soukromi" className="hover:text-purple-400 transition-colors">
+            <Link href="/ochrana-soukromi" className="hover:text-[#30ff97] transition-colors">
               Ochrana soukromí
             </Link>
           </div>
@@ -103,7 +103,7 @@ function SocialLink({ type, href }: { type: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-purple-800/50 flex items-center justify-center hover:bg-purple-700/50 transition-colors"
+      className="w-10 h-10 next-block-border-purple bg-black flex items-center justify-center hover:border-[#30ff97] transition-colors"
       title={type.charAt(0).toUpperCase() + type.slice(1)}
     >
       <svg
