@@ -27,8 +27,8 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeIn">
-          <span className="text-purple-500">Chain</span><span className="text-lime-400">Camp</span> 2026
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeIn next-block-heading">
+          <span className="text-[#530b6e]">CHAIN</span><span className="text-[#30ff97]">CAMP</span> 2026
         </h1>
         <p className="text-2xl md:text-3xl text-gray-300 mb-8 animate-fadeIn animation-delay-200">
           <span className="font-bold tracking-wider">NEXT BLOCK</span> - 7. ročník legendární akce bitcoinové komunity
@@ -40,13 +40,13 @@ export function Hero() {
         <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mb-12 animate-fadeIn animation-delay-600">
           <Link
             href="#tickets"
-            className="bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] px-8 py-4 rounded-sm transition-colors text-lg font-semibold border-2 border-[#30ff97]/50"
+            className="next-block-btn next-block-btn-primary px-8 py-4 text-lg"
           >
             Koupit vstupenku
           </Link>
           <Link
             href="#schedule"
-            className="bg-black hover:bg-black/80 text-[#30ff97] px-8 py-4 rounded-sm transition-colors text-lg font-semibold border-2 border-[#530b6e]/70"
+            className="next-block-btn next-block-btn-secondary px-8 py-4 text-lg"
           >
             Program konference
           </Link>
@@ -55,16 +55,16 @@ export function Hero() {
         <div className="mt-16 animate-fadeIn animation-delay-800">
           <p className="text-[#30ff97] mb-4 font-medium tracking-wider uppercase">Hlavní partneři</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="w-32 h-16 bg-black border-2 border-[#530b6e] rounded-none flex items-center justify-center hover:border-[#30ff97] transition-colors">
+            <div className="w-32 h-16 bg-black next-block-border-purple flex items-center justify-center hover:border-[#30ff97] transition-colors">
               <span className="text-white font-bold">Trezor</span>
             </div>
-            <div className="w-32 h-16 bg-black border-2 border-[#30ff97] rounded-none flex items-center justify-center hover:border-[#530b6e] transition-colors">
+            <div className="w-32 h-16 bg-black next-block-border-lime flex items-center justify-center hover:border-[#530b6e] transition-colors">
               <span className="text-white font-bold">Alza</span>
             </div>
-            <div className="w-32 h-16 bg-black border-2 border-[#530b6e] rounded-none flex items-center justify-center hover:border-[#30ff97] transition-colors">
+            <div className="w-32 h-16 bg-black next-block-border-purple flex items-center justify-center hover:border-[#30ff97] transition-colors">
               <span className="text-white font-bold">Paralelní Polis</span>
             </div>
-            <div className="w-32 h-16 bg-black border-2 border-[#30ff97] rounded-none flex items-center justify-center hover:border-[#530b6e] transition-colors">
+            <div className="w-32 h-16 bg-black next-block-border-lime flex items-center justify-center hover:border-[#530b6e] transition-colors">
               <span className="text-white font-bold">Braiins</span>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function Hero() {
       {/* Scroll down indicator - block style */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <Link href="#about" className="block">
-          <div className="w-10 h-10 border-2 border-[#30ff97] relative">
+          <div className="w-10 h-10 next-block-border-lime relative">
             <div className="absolute inset-0 flex items-center justify-center text-[#30ff97]">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

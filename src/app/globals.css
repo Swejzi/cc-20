@@ -84,6 +84,24 @@
   --lime: #30ff97;
   --lime-light: #5fffad;
   --lime-dark: #00cc6a;
+
+  /* Custom border radius for NEXT BLOCK theme */
+  --border-radius-none: 0px;
+  --border-radius-sm: 0px;
+  --border-radius-md: 0px;
+  --border-radius-lg: 0px;
+  --border-radius-xl: 0px;
+  --border-radius-2xl: 0px;
+  --border-radius-3xl: 0px;
+  --border-radius-full: 0px;
+
+  /* Custom border width */
+  --border-width-default: 2px;
+
+  /* Custom box shadow */
+  --box-shadow-sm: none;
+  --box-shadow-md: none;
+  --box-shadow-lg: none;
 }
 
 .dark {
@@ -127,4 +145,67 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom utility classes for NEXT BLOCK theme */
+.next-block-border {
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+}
+
+.next-block-border-purple {
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  border-color: var(--purple-primary);
+}
+
+.next-block-border-lime {
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  border-color: var(--lime);
+}
+
+.next-block-btn {
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.next-block-btn-primary {
+  background-color: var(--purple-primary);
+  color: var(--lime);
+  border-color: var(--lime);
+}
+
+.next-block-btn-primary:hover {
+  background-color: var(--purple-dark);
+  border-color: var(--lime-light);
+}
+
+.next-block-btn-secondary {
+  background-color: transparent;
+  color: var(--lime);
+  border-color: var(--purple-primary);
+}
+
+.next-block-btn-secondary:hover {
+  background-color: rgba(83, 11, 110, 0.1);
+  border-color: var(--lime);
+}
+
+.next-block-card {
+  background-color: black;
+  border-width: var(--border-width-default);
+  border-radius: var(--border-radius-none);
+  padding: 1.5rem;
+}
+
+.next-block-heading {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }

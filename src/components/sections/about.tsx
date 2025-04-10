@@ -3,7 +3,7 @@ export function About() {
     <section id="about" className="py-20 bg-black/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider uppercase">
+          <h2 className="text-3xl md:text-4xl mb-4 next-block-heading">
             <span className="text-[#530b6e]">NEXT</span> <span className="text-[#30ff97]">BLOCK</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-[#530b6e] to-[#30ff97] mx-auto"></div>
@@ -25,27 +25,27 @@ export function About() {
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="bg-black p-6 rounded-none border-2 border-[#30ff97] hover:border-[#530b6e] transition-colors text-center">
+              <div className="bg-black p-6 next-block-border-lime hover:border-[#530b6e] transition-colors text-center">
                 <div className="text-3xl font-bold text-lime-400 mb-2">2000+</div>
                 <div className="text-gray-300">Účastníků</div>
               </div>
-              <div className="bg-black p-6 rounded-none border-2 border-[#530b6e] hover:border-[#30ff97] transition-colors text-center">
+              <div className="bg-black p-6 next-block-border-purple hover:border-[#30ff97] transition-colors text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">40+</div>
                 <div className="text-gray-300">Přednášek</div>
               </div>
-              <div className="bg-black p-6 rounded-none border-2 border-[#30ff97] hover:border-[#530b6e] transition-colors text-center">
+              <div className="bg-black p-6 next-block-border-lime hover:border-[#530b6e] transition-colors text-center">
                 <div className="text-3xl font-bold text-lime-400 mb-2">30+</div>
                 <div className="text-gray-300">Speakerů</div>
               </div>
-              <div className="bg-black p-6 rounded-none border-2 border-[#530b6e] hover:border-[#30ff97] transition-colors text-center">
+              <div className="bg-black p-6 next-block-border-purple hover:border-[#30ff97] transition-colors text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">7.</div>
                 <div className="text-gray-300">Ročník</div>
               </div>
             </div>
           </div>
 
-          <div className="bg-black p-8 rounded-none border-2 border-[#530b6e]">
-            <h3 className="text-2xl font-bold mb-6 uppercase tracking-wider">
+          <div className="bg-black p-8 next-block-border-purple">
+            <h3 className="text-2xl mb-6 next-block-heading">
               <span className="text-[#30ff97]">NEXT</span> <span className="text-[#530b6e]">BLOCK</span> <span className="text-white">PROGRAM</span>
             </h3>
 
