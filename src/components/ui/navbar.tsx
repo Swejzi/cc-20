@@ -8,14 +8,14 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-lg border-b border-purple-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-lg border-b-2 border-[#530b6e]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-white">
-                <span style={{ color: '#530b6e' }}>Chain</span><span style={{ color: '#30ff97' }}>Camp</span>
+              <span className="text-2xl font-bold text-white tracking-wider">
+                <span className="text-[#530b6e]">CHAIN</span><span className="text-[#30ff97]">CAMP</span>
               </span>
             </Link>
           </div>
@@ -42,7 +42,7 @@ export function Navbar() {
             </Link>
             <Link
               href="#tickets"
-              className="bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] px-4 py-2 rounded-full transition-colors border border-[#30ff97]/50"
+              className="bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] px-4 py-2 rounded-none transition-colors border-2 border-[#30ff97]/70"
             >
               Vstupenky
             </Link>
@@ -71,7 +71,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-lg border-b border-purple-500/20">
+        <div className="md:hidden bg-black/90 backdrop-blur-lg border-b-2 border-[#530b6e]">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="#about"
@@ -117,7 +117,7 @@ export function Navbar() {
             </Link>
             <Link
               href="#tickets"
-              className="block px-3 py-2 bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] rounded-full transition-colors text-center mt-4 border border-[#30ff97]/50"
+              className="block px-3 py-2 bg-[#530b6e] hover:bg-[#3d0852] text-[#30ff97] rounded-none transition-colors text-center mt-4 border-2 border-[#30ff97]/70"
               onClick={() => setIsMenuOpen(false)}
             >
               Vstupenky
