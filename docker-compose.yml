@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: chaincamp20-swejzi-frontend
+    ports:
+      - "8080:3000"
+    networks:
+      - pilarj-proxy_proxyNet
+    restart: unless-stopped
+
+networks:
+  pilarj-proxy_proxyNet:
+    external: true
